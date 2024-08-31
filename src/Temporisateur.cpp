@@ -89,7 +89,7 @@ void Temporisateur::processTimers()
             // Reset time after overflow
        }else {
         timer->Q =!timer->Q;
-        timer->CT = 0;
+        //timer->CT = 0;
        }
      }
     }
