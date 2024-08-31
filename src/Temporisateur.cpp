@@ -82,13 +82,18 @@ void Temporisateur::processTimers()
     Temporisateur* timer = timers[i];
     if (timer->started) {
       if (timer->CT++ >= timer->ST-1) {
+        if(timer->blinking ==false) {
         timer->Q = true;
         timer->started =false;
-        //timer->CT = 0; 
+        timer->CT = 0; 
             // Reset time after overflow
-      }
+       }else {
+        timer->Q =!timer->Q;
+        timer->CT = 0;
+       }
+     }
     }
-  }
+  } 
 }
 
 ISR(TIMER1_COMPA_vect)
