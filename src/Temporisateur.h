@@ -27,7 +27,7 @@ class Temporisateur
     int CT;
     int ST;
     bool started;
-    bool blinking;
+    
     
     // Register the object with the ISR
     void registerTimer();
