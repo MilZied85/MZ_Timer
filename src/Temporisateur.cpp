@@ -85,12 +85,7 @@ void Temporisateur::processTimers()
         if(timer->blinking ==false) {
         timer->Q = true;
         timer->started =false;
-        timer->CT = 0; 
-            // Reset time after overflow
-       }else {
-        timer->Q =!timer->Q;
-        //timer->CT = 0;
-       }
+        timer->CT = 0;        // Reset time after overflow
      }
     }
   } 
